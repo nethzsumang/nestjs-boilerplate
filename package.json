@@ -1,5 +1,5 @@
 {
-  "name": "finance-app",
+  "name": "test-app",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -32,6 +32,7 @@
     "@nestjs/typeorm": "^8.0.2",
     "cache-manager": "^3.4.4",
     "csurf": "^1.11.0",
+    "dotenv": "^10.0.0",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.0",
     "reflect-metadata": "^0.1.13",
