@@ -3,9 +3,9 @@ import { HttpModule } from '@nestjs/axios';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
-import { ConfigurationModule } from './global_modules/config.module';
-import { DatabaseConfigModule } from './global_modules/database.module';
-import { ThrottlerConfigModule } from './global_modules/throttler.module';
+import { ConfigurationModule } from './common/config.module';
+import { DatabaseConfigModule } from './common/database.module';
+import { ThrottlerConfigModule } from './common/throttler.module';
 
 @Module({
   imports: [
