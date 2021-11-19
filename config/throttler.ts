@@ -1,4 +1,4 @@
-import { registerAs } from "@nestjs/config";
+import { registerAs } from '@nestjs/config';
 
 /**
  * Throttler config values

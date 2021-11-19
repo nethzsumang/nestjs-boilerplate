@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import appConfig from '../../config/app';
 import databaseConfig from '../../config/database';
 import throttlerConfig from '../../config/throttler';
 
@@ -8,6 +9,7 @@ import throttlerConfig from '../../config/throttler';
     ConfigModule.forRoot({
       envFilePath: ['.env'],
       load: [
+        appConfig,
         databaseConfig,
         throttlerConfig
       ],
