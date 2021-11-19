@@ -7,10 +7,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) => {
-        console.log(configService.get('database.DB_PORT'));
-        return configService.get('database')
-      },
+      useFactory: (configService: ConfigService) => configService.get('database')
     }),
   ],
 })
