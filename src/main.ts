@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
+import { VersioningType } from '@nestjs/common';
 import * as session from 'express-session';
 import * as csurf from 'csurf';
 import { join } from 'path';
@@ -20,6 +21,11 @@ async function bootstrap() {
 
   // for CORS
   // app.enableCors();
+
+  // for API versioning
+  // app.enableVersioning({
+  //   type: VersioningType.URI,
+  // });
 
   // for views
   // app.useStaticAssets(join(__dirname, '..', 'public'));
