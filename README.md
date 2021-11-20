@@ -10,3 +10,6 @@
     * CORS Prevention
     * Rate-limiter (@nestjs/throttler)
     * Testing (@nestjs/testing)
+    * Custom Logger Service (with log levels implementation)
+    * Views (handlebars)
+    * API Versioning
