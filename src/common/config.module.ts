@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import appConfig from '../../config/app';
 import databaseConfig from '../../config/database';
 import throttlerConfig from '../../config/throttler';
+import loggingConfig from '../../config/logging';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import throttlerConfig from '../../config/throttler';
       load: [
         appConfig,
         databaseConfig,
-        throttlerConfig
+        throttlerConfig,
+        loggingConfig
       ],
       isGlobal: true
     }),

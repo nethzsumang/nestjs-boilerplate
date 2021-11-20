@@ -6,10 +6,14 @@ import { VersioningType } from '@nestjs/common';
 import * as session from 'express-session';
 import * as csurf from 'csurf';
 import { join } from 'path';
+import { LoggingService } from './common/services/logger.service';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get<ConfigService>(ConfigService);
+
+  // for logging
+  app.useLogger(app.get(LoggingService));
 
   // for CSRF protection
   // app.use(session({

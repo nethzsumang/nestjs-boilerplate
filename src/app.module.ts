@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { ConfigurationModule } from './common/config.module';
 import { DatabaseConfigModule } from './common/database.module';
 import { ThrottlerConfigModule } from './common/throttler.module';
+import { LoggerModule } from './common/logger.module';
 
 @Module({
   imports: [
@@ -14,6 +15,9 @@ import { ThrottlerConfigModule } from './common/throttler.module';
     HttpModule,
     ThrottlerConfigModule,
     DatabaseConfigModule,
+    LoggerModule,
+
+    // application modules
     UserModule,
   ],
   controllers: [AppController],
